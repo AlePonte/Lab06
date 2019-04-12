@@ -37,7 +37,9 @@ public class MeteoController {
 
 	@FXML
 	void doCalcolaUmidita(ActionEvent event) {
-
+		txtResult.clear();
+		txtResult.appendText(model.getUmiditaMedia(boxMese.getValue()));
+		
 	}
 
 	@FXML
@@ -51,9 +53,8 @@ public class MeteoController {
 	public void setModel (Model model){
 		this.model=model;
 		
-		//boxLingua.getItems().addAll("English", "Italian");
+		//imposta la comboBox con i seguenti valori
 		boxMese.getItems().addAll(1,2,3,4,5,6,7,8,9,10,11,12);
-		
 		
 	}
 
